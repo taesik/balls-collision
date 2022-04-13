@@ -1,6 +1,6 @@
 class Ball {
 
-  constructor(x, y,  col) {
+  constructor(x, y) {
     this.radius = Math.floor(Math.random() * (20 - 10 + 1) + 10);
     this.x = x;
     this.y = y;
@@ -9,7 +9,7 @@ class Ball {
     this.dy = randomDy();
 
     this.mass = this.radius * this.radius * this.radius;
-    this.color = color(col);
+    this.color = 'rgb(0,0,0 )';
   }
 
   draw() {

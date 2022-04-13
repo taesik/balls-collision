@@ -17,7 +17,7 @@ function clearCanvas() {
 }
 
 function canvasBackground() {
-  canvas.style.backgroundColor = "rgb(215, 235, 240)";
+  canvas.style.backgroundColor = "rgb(255, 255, 255)";
 }
 
 function drawObjects() {
@@ -188,14 +188,11 @@ function draw() {
   window.requestAnimationFrame(draw);
 }
 
-function logger() {
-  // log stuff
-}
 
-for (var i = 0; i < countOfBalls; i++) {
+for (let i = 0; i < countOfBalls; i++) {
   if (i == 0) {
-    ballArray[i] = new Ball(xCoordinate(), yCoordinate(), raduius(), 0);
-  } else ballArray[i] = new Ball(xCoordinate(), yCoordinate(), raduius(), 1);
+    ballArray[i] = new Ball(xCoordinate(), yCoordinate() );
+  } else ballArray[i] = new Ball(xCoordinate(), yCoordinate());
 }
 
 draw();
