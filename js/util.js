@@ -25,22 +25,13 @@ function yCoordinate() {
 
 // randomDx for the next position in X - coordinate
 function randomDx() {
-  let r = Math.floor(Math.random() * 10 - 4);
-  return r;
+  return Math.floor(Math.random() * 10 - 4);
 }
 // randomDx for the next position in Y - coordinate
 function randomDy() {
-  let r = Math.floor(Math.random() * 10 - 3);
-  return r;
+  return Math.floor(Math.random() * 10 - 3);
 }
 
-function distanceNextFrame(a, b) {
-  return (
-    Math.sqrt((a.x + a.dx - b.x - b.dx) ** 2 + (a.y + a.dy - b.y - b.dy) ** 2) -
-    a.radius -
-    b.radius
-  );
-}
 
 function distance(a, b) {
   return Math.sqrt((a.x - b.x) ** 2 + (a.y - b.y) ** 2);

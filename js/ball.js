@@ -28,8 +28,6 @@ class Ball {
     ctx.closePath();
   }
 
-
-
   speed() {
     // magnitude of velocity vector
     return Math.sqrt(this.dx * this.dx + this.dy * this.dy);

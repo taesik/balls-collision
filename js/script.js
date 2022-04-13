@@ -1,11 +1,8 @@
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
 
-let ballArray = []; // array for creating the balles based on people number
+let ballArray = []; // array for creating the balls based on countOfBalls
 let countOfBalls = Math.floor(Math.random() * (20 - 10 + 1) + 10); // number of people in city
-
-// assume canvas is clear
-let clearCanv = true;
 
 // time data for drawing
 let lastTime = new Date().getTime();
@@ -27,8 +24,8 @@ function drawObjects() {
 }
 
 function moveObjects() {
-  // here we change the x-coordinate and y-coordinate randomly but the balls while get out of the canvase
-  // we should add the collision with wall of canvase
+  // here we change the x-coordinate and y-coordinate randomly but the balls while get out of the canvas
+  // we should add the collision with wall of canvas
   for (let i = 0; i < ballArray.length; i++) {
     let ob = ballArray[i];
     ob.x += (ob.dx * dt) / 2;
@@ -72,7 +69,6 @@ function ballCollision() {
       let dist = distance(ob1, ob2);
 
       if (dist < ob1.radius + ob2.radius) {
-        // here when the balls are collision
         // console.log("balls collision");
 
         let theta1 = ob1.angle();
@@ -149,18 +145,6 @@ function staticCollision(ob1, ob2, emergency = false) {
   }
 }
 
-function applyGravity() {
-  for (let obj in ballArray) {
-    let ob = ballArray[obj];
-    if (ob.onGround() == false) {
-      ob.dy += 0.29;
-    }
-
-    // apply basic drag
-    ob.dx *= 0.99;
-    ob.dy *= 0.975;
-  }
-}
 
 function draw() {
   // draw function
@@ -172,7 +156,7 @@ function draw() {
   // we increase the speed of time
   dt *= 50;
 
-  if (clearCanv) clearCanvas();
+  clearCanvas();
   canvasBackground();
 
   drawObjects();
