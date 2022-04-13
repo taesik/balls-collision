@@ -1,28 +1,6 @@
-function color(color) {
-  if (color == 1) {
-    return healthyColor();
-  } else if (color == 0) {
-    return injuredColor();
-  }
-}
 
-function healthyColor() {
-  let red = 0;
-  let green = 255;
-  let blue = 0;
 
-  let rc = "rgb(" + red + ", " + green + ", " + blue + ")";
-  return rc;
-}
 
-function injuredColor() {
-  let red = 255;
-  let green = 0;
-  let blue = 0;
-
-  let rc = "rgb(" + red + ", " + green + ", " + blue + ")";
-  return rc;
-}
 function xCoordinate() {
   // random position x
   let x = Math.floor(Math.random() * canvas.width);
@@ -44,11 +22,7 @@ function yCoordinate() {
   }
   return y;
 }
-function raduius() {
-  let r = 5;
 
-  return r;
-}
 // randomDx for the next position in X - coordinate
 function randomDx() {
   let r = Math.floor(Math.random() * 10 - 4);
