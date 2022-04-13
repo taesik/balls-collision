@@ -147,7 +147,6 @@ function staticCollision(ob1, ob2, emergency = false) {
 
 
 function draw() {
-  // draw function
   currentTime = new Date().getTime();
   dt = (currentTime - lastTime) / 1000; // delta time in seconds
 
@@ -165,8 +164,6 @@ function draw() {
 
   ballCollision();
 
-  // applyGravity();
-  //logger();
 
   lastTime = currentTime;
   window.requestAnimationFrame(draw);
