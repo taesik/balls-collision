@@ -74,14 +74,7 @@ function ballCollision() {
       if (dist < ob1.radius + ob2.radius) {
         // here when the balls are collision
         // console.log("balls collision");
-        if (ob1.color === "rgb(255, 0, 0)" || ob2.color === "rgb(255, 0, 0)") {
-          if (ob1.color === "rgb(255, 0, 0)") {
-            ob2.color = injuredColor();
-          }
-          if (ob2.color == "rgb(255, 0, 0)") {
-            ob1.color = injuredColor();
-          }
-        }
+
         let theta1 = ob1.angle();
         let theta2 = ob2.angle();
         let phi = Math.atan2(ob2.y - ob1.y, ob2.x - ob1.x);

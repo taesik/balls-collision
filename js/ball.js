@@ -28,9 +28,7 @@ class Ball {
     ctx.closePath();
   }
 
-  changeColor() {
-    this.color = injuredColor();
-  }
+
 
   speed() {
     // magnitude of velocity vector
